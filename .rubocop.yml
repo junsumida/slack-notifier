@@ -6,6 +6,8 @@ AllCops:
     - 'Rakefile'
     - 'bin/test'
 
+  NewCops: enable
+
 # Naming ------------------------------------
 
 Naming/FileName:
@@ -44,22 +46,21 @@ Layout/MultilineOperationIndentation:
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: aligned
 
-Layout/MultilineOperationIndentation:
-  Enabled: false
-
 Layout/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: no_space
 
 Layout/IndentationConsistency:
-  EnforcedStyle: rails
+  EnforcedStyle: indented_internal_methods
 
 Layout/DotPosition:
   EnforcedStyle: leading
 
-# Metrics ----------------------------------
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 128
+# Metrics ----------------------------------
 
 Metrics/AbcSize:
   Enabled: false
@@ -72,6 +73,3 @@ Metrics/BlockLength:
     - spec/**/*
 
 # Lint -------------------------------------
-
-Lint/EndAlignment:
-  EnforcedStyleAlignWith: variable
