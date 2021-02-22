@@ -63,7 +63,7 @@ RSpec.describe Slack::Notifier do
         payload: '{"channel":"default","user":"rocket","text":"hello"}'
       )
 
-      subject.post text: "hello"
+      subject.post({text: "hello"})
     end
 
     it "allows overriding the set defaults" do
@@ -74,7 +74,7 @@ RSpec.describe Slack::Notifier do
         payload: '{"channel":"new","user":"ship","text":"hello"}'
       )
 
-      subject.post text: "hello", channel: "new", user: "ship"
+      subject.post({text: "hello", channel: "new", user: "ship"})
     end
 
     it "calls the middleware stack with the payload" do
